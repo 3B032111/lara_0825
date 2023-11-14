@@ -55,7 +55,9 @@ Route::get('/', function () {
    // $allPosts=Post::all();
     //dd($allPosts);
 
-    $featuredPosts = Post::where('is_feature',1)->get();
-    dd($featuredPosts);
+    //$featuredPosts = Post::where('is_feature',1)->get();
+    //dd($featuredPosts);
+$fourthPost=Post::find(4);
+dd($fourthPost);
 
 });
