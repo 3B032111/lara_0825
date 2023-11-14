@@ -52,7 +52,10 @@ Route::get('/', function () {
          $post->content = 'saved content';
          $post->save();*/
 
-    $allPosts=Post::all();
-    dd($allPosts);
+   // $allPosts=Post::all();
+    //dd($allPosts);
+
+    $featuredPosts = Post::where('is_feature',1)->get();
+    dd($featuredPosts);
 
 });
