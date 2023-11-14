@@ -65,7 +65,7 @@ Route::get('/', function () {
   //  $lastPost = Post::orderBy('id','DESC')->first();
     //dd($lastPost);
 
-    $post = Post::find(6);
+ /*   $post = Post::find(6);
     echo '標題： '.$post->title.'<br>';
     echo '內容： '.$post->content.'<br>';
     echo '------------------------'.'<br>';
@@ -73,5 +73,13 @@ Route::get('/', function () {
     foreach ($comments as $comment){
         echo '留言： '.$comment->content."<br>";
         echo '------------------------'.'<br>';
-    }
+    }  */
+
+    $comment = Comment::find(5);
+    echo $comment->content.'<br>';
+    echo '*****************'.'<br>';
+    $post = $comment->post()->first();
+    echo $post->id.'<br>';
+    echo $post->title.'<br>';
+    echo $post->content.'<br>';
 });
