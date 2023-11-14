@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Post;
-
+use App\Models\Comment;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +15,7 @@ use App\Models\Post;
 */
 
 Route::get('/', function () {
+
     /*
     Post::create([
         'title'=>'created title',
@@ -59,6 +60,18 @@ Route::get('/', function () {
         $post->save();*/
 
 
-    Post::destroy(3,5,7);
+        // Post::destroy(3,5,7);
+    //$allPosts = Post::all();
+    //dd($allPosts);
+
+   // $featurePosts = Post::where('is_feature', 1)->get();
+    //dd($featurePosts);
+
+   // $fourthPost = Post::find(4);
+   // dd($fourthPost);
+
+    //$lastPost = Post::orderBy('id','DESC')->first();
+   // dd($lastPost);
+
 
 });
