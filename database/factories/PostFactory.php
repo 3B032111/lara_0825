@@ -17,7 +17,7 @@ class PostFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => $this -> faker -> sentence,
+            'title' => fake()->sentence(),
             'content' => $this -> faker -> paragraph(),
             'is_feature' => (bool)rand(0, 1),
         ];
